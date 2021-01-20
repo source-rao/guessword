@@ -20,9 +20,11 @@ result = list()
 for letter in letters:
     result.append('_')
 
+# Variables
 incorrect = 0
 guesstest = 0
 win = 0
+
 print('The word has ' + str(len(letters)) + ' letters in it.')
 
 while incorrect < 5:
