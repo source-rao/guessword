@@ -21,15 +21,16 @@ for letter in letters:
     result.append('_')
 
 # Variables
-incorrect = 0
 guesstest = 0
 incorrectguesses = list()
 
 print('The word has ' + str(len(letters)) + ' letters in it.')
+difficulty = input('Choose a difficulty level (1-3): ')
+incorrect = int(difficulty) - 1
 
 while incorrect < 5:
     print('You have ' + str(5 - incorrect) +' incorrect guesses remaining.')
-    guess = input('Enter a letter to guess: ').lower()
+    guess = input('\nEnter a letter to guess: ').lower()
     count = 0
     for letter in letters: # Check each letter against guessed character
         if guess == letter:
